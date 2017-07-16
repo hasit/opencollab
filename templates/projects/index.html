@@ -1,0 +1,27 @@
+<h1>Projects</h1>
+<p>
+  <a href="<%= newProjectsPath() %>" class="btn btn-primary">Create New Project</a>
+</p>
+
+<table class="table table-striped">
+  <thead>
+  <th>Title</th>
+    <th>Author</th>
+    <th>&nbsp;</th>
+  </thead>
+  <tbody>
+    <%= for (project) in projects { %>
+      <tr>
+      <td><%= project.Title %></td>
+        <td><%= project.Author %></td>
+        <td>
+          <div class="pull-right">
+            <a href="<%= projectPath({ project_id: project.ID }) %>" class="btn btn-info">View</a>
+            <a href="<%= editProjectPath({ project_id: project.ID }) %>" class="btn btn-warning">Edit</a>
+            <a href="<%= projectPath({ project_id: project.ID }) %>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Destroy</a>
+          </div>
+        </td>
+      </tr>
+    <% } %>
+  </tbody>
+</table>

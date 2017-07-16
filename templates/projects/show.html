@@ -1,0 +1,14 @@
+<h1>Project#Show</h1>
+
+<ul class="list-unstyled list-inline">
+  <li><a href="<%= projectsPath() %>" class="btn btn-info">Back to all Projects</a></li>
+  <li><a href="<%= editProjectPath({ project_id: project.ID })%>" class="btn btn-warning">Edit</a></li>
+  <li><a href="<%= projectPath({ project_id: project.ID })%>" data-method="DELETE" data-confirm="Are you sure?" class="btn btn-danger">Destroy</a>
+</ul>
+
+<p>
+  <strong>Title</strong>: <%= project.Title %>
+</p>
+<p>
+  <strong>Author</strong>: <%= project.Author %>
+</p>

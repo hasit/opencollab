@@ -1,0 +1,6 @@
+<h1>Edit Project</h1>
+
+<%= form_for(project, {action: projectPath({ project_id: project.ID }), method: "PUT"}) { %>
+  <%= partial("projects/form.html") %>
+  <a href="<%= projectsPath({ project_id: project.ID }) %>" class="btn btn-warning" data-confirm="Are you sure?">Cancel</a>
+<% } %>

@@ -1,0 +1,55 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>OpenCollab Space</title>
+  <link rel="stylesheet" href="/assets/application.css" type="text/css" media="all" />
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="<%= authenticity_token %>" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img alt="OpenCollab Space" class="navbar-brand" src="/assets/images/logo.svg">
+          <a class="navbar-brand strong" href="/">OpenCollab Space</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <%= if (current_user) { %>
+              <li>
+                <a href="#"><%= current_user.Name %></a>
+              </li>
+              <li>
+                <a href="/auth" data-method="DELETE">Logout</a>
+              </li>
+            <% } else { %>
+              <li>
+                <a href="/login">Login</a>
+              </li>
+            <% } %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container-fluid -->
+    </nav>
+
+    <%= yield %>
+  </div>
+  
+  <script src="/assets/application.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

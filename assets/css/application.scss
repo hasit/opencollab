@@ -1,0 +1,29 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.css';
+@import '~bootstrap-social/bootstrap-social.css';
+
+$black: #324a5e;
+
+body {
+  padding: 20px 0;
+  color: $black;
+}
+
+.navbar {
+  margin-bottom: 20px;
+
+  .strong {
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+// .jumbotron {
+//   background-color: white;
+//   border: 1px solid transparent;
+//   border-radius: 4px;
+//   border-color: #dddddd;
+// }
