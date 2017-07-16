@@ -6,7 +6,7 @@ import (
 	"github.com/gobuffalo/buffalo/middleware/csrf"
 	"github.com/gobuffalo/buffalo/middleware/i18n"
 
-	"github.com/hasit/opencollab/models"
+	"github.com/hasit/opencollab.space/models"
 
 	"github.com/gobuffalo/envy"
 	"github.com/gobuffalo/packr"

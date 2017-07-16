@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/gobuffalo/suite"
-	"github.com/opencollabspace/opencollab.space/actions"
+	"github.com/hasit/opencollab.space/actions"
 )
 
 type ActionSuite struct {

@@ -5,7 +5,7 @@ import (
 	"os"
 	"text/tabwriter"
 
-	"github.com/hasit/opencollab/actions"
+	"github.com/hasit/opencollab.space/actions"
 	. "github.com/markbates/grift/grift"
 )
 

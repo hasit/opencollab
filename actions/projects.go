@@ -2,7 +2,7 @@ package actions
 
 import (
 	"github.com/gobuffalo/buffalo"
-	"github.com/hasit/opencollab/models"
+	"github.com/hasit/opencollab.space/models"
 	"github.com/markbates/pop"
 	"github.com/pkg/errors"
 )

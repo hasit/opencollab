@@ -2,8 +2,8 @@
 # https://docs.docker.com/engine/userguide/eng-image/multistage-build/
 FROM gobuffalo/buffalo:v0.9.0 as builder
 
-RUN mkdir -p $GOPATH/src/github.com/opencollabspace/opencollab.space
-WORKDIR $GOPATH/src/github.com/opencollabspace/opencollab.space
+RUN mkdir -p $GOPATH/src/github.com/hasit/opencollab.space
+WORKDIR $GOPATH/src/github.com/hasit/opencollab.space
 
 # this will cache the npm install step, unless package.json changes
 ADD package.json .

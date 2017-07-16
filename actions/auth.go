@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/gobuffalo/buffalo"
-	"github.com/hasit/opencollab/models"
+	"github.com/hasit/opencollab.space/models"
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
 	"github.com/markbates/goth/providers/github"
