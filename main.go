@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gobuffalo/envy"
-	"github.com/opencollabspace/opencollab.space/actions"
+	"github.com/hasit/opencollab/actions"
 )
 
 func main() {

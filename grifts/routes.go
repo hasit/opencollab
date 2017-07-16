@@ -5,8 +5,8 @@ import (
 	"os"
 	"text/tabwriter"
 
+	"github.com/hasit/opencollab/actions"
 	. "github.com/markbates/grift/grift"
-	"github.com/opencollabspace/opencollab.space/actions"
 )
 
 var _ = Add("routes", func(c *Context) error {
