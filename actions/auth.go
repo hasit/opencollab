@@ -9,7 +9,6 @@ import (
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
 	"github.com/markbates/goth/providers/github"
-	"github.com/markbates/goth/providers/twitter"
 	"github.com/markbates/pop"
 	"github.com/pkg/errors"
 )
@@ -18,7 +17,6 @@ func init() {
 	gothic.Store = App().SessionStore
 
 	goth.UseProviders(
-		twitter.New(os.Getenv("TWITTER_KEY"), os.Getenv("TWITTER_SECRET"), fmt.Sprintf("%s%s", App().Host, "/auth/twitter/callback")),
 		github.New(os.Getenv("GITHUB_OSC_KEY"), os.Getenv("GITHUB_OSC_SECRET"), fmt.Sprintf("%s%s", App().Host, "/auth/github/callback")),
 	)
 }
@@ -70,6 +68,7 @@ func SetCurrentUser(next buffalo.Handler) buffalo.Handler {
 				return errors.WithStack(err)
 			}
 			c.Set("current_user", u)
+			c.Set("current_user_id", u.ID)
 		}
 		return next(c)
 	}
